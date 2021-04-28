@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="274dp"
+            android:layout_height="53dp"
+            android:layout_marginLeft="15dp"
+            />
+
+</layout>

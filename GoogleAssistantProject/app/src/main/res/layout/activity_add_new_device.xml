@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNewDevice">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="393dp"
+            android:layout_height="179dp"
+            android:layout_weight="0.2"
+            android:gravity="center_horizontal">
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="216dp"
+                android:rowCount="2">
+
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_margin="20dp"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="@string/addDevDesc"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/devImg"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:src="@drawable/home" />
+
+            </GridLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_weight="0.15"
+            android:layout_height="match_parent" >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:startIconDrawable="@drawable/pencil"
+                app:startIconContentDescription="pencil"
+                android:layout_margin="8dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/name"
+                    android:hint="@string/devName" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_weight="0.15"
+            android:layout_height="match_parent" >
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:startIconDrawable="@drawable/pencil"
+                android:layout_margin="8dp"
+                app:startIconContentDescription="pencil"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                <AutoCompleteTextView
+                    android:id="@+id/type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:hint="@string/devType" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_weight="0.15"
+            android:layout_height="match_parent" >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:startIconDrawable="@drawable/pencil"
+                app:startIconContentDescription="pencil"
+                android:layout_margin="8dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/factory"
+                    android:hint="@string/devManufater" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_weight="0.15"
+            android:layout_height="match_parent" >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:startIconDrawable="@drawable/pencil"
+                app:startIconContentDescription="pencil"
+                android:layout_margin="8dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/model"
+                    android:hint="@string/devModel" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_weight="0.2"
+            android:layout_height="match_parent" >
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:columnCount="2">
+
+                <Button
+                    android:id="@+id/buttonCancel"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:onClick="annullaClicked"
+                    android:text="@string/annulla" />
+
+                <Button
+                    android:id="@+id/buttonSave"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:onClick="salvaClicked"
+                    android:text="@string/salva" />
+            </GridLayout>
+        </TableRow>
+        </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

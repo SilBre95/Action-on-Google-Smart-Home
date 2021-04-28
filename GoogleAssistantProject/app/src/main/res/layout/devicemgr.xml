@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+        <data>
+        <variable
+            name="viewmodel"
+            type="com.example.googleassistantproject.Devices" />
+        </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="121dp">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="336dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_columnSpan="2"
+                android:background="@color/celeste"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="293dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="GoogleAssistantProject"
+                    android:textColor="#FFFFFF"
+                    android:textColorHighlight="#2196F3"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/deleteButt"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/celeste"
+                    android:clickable="true"
+                    android:scaleType="fitCenter"
+                    android:onClick="deleteClicked"
+                    android:src="@drawable/trash"></ImageButton>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="822dp"
+                android:layout_height="108dp"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_columnSpan="2"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    app:imageResource="@{viewmodel.devImg}" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="288dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="casual"
+                    android:gravity="center_vertical"
+                    android:text="@{viewmodel.name}"
+                    android:textColor="#2196F3"
+                    android:textSize="28dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="102dp"
+                android:layout_height="120dp"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Tipologia:" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Marca:" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Modello:" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="309dp"
+                android:layout_height="119dp"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="@{viewmodel.typeToSend}" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="@{viewmodel.deviceManufact}" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="@{viewmodel.model}" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:layout_columnSpan="2">
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#99B7B9C3"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="Settings"
+                    android:textColor="#2196F3"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </GridLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/custom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:layout_columnSpan="2"
+                android:orientation="vertical">
+
+
+                <!--ONOFF-->
+                <Switch
+                    android:id="@+id/onOff"
+                    android:layout_width="316dp"
+                    android:layout_height="53dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="ON / OFF"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+                <!--STARTSTOP-->
+                <Switch
+                    android:id="@+id/startStop"
+                    android:layout_width="316dp"
+                    android:layout_height="53dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="START / STOP"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+                <!--COOKMODE-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/cookTemp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:layout_margin="15dp"
+                    android:visibility="gone">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/cookMode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/cookmode"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <Switch
+                    android:id="@+id/startCook"
+                    android:layout_width="316dp"
+                    android:layout_height="53dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="STA CUCINANDO"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <!--TEMPERATURECONTROL-->
+                <TableRow
+                    android:id="@+id/tempCon"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:numColumns="2"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:text="TEMPERATURA (C°)"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <NumberPicker
+                        android:id="@+id/tempSet"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:layout_marginRight="5dp"></NumberPicker>
+
+
+                </TableRow>
+                <!--MODES-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/modes"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:layout_margin="15dp"
+                    android:visibility="gone">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/modesText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/mode"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <!--TOOGLES-->
+                <Switch
+                    android:id="@+id/toogle"
+                    android:layout_width="316dp"
+                    android:layout_height="53dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="TURBO"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+                <!--FANSPEED-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fanmodes"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:layout_margin="15dp"
+                    android:visibility="gone">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/fanModesText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/modefan"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Switch
+                    android:id="@+id/reverse"
+                    android:layout_width="316dp"
+                    android:layout_height="53dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="INVERTI VENTOLE"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+                <!--HUMIDITYCONTROL-->
+                <TableRow
+                    android:id="@+id/ambientHumidityRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:numColumns="2"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:text="UMIDITA' AMBIENTE (%)"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ambientHumidity"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_marginLeft="25dp"
+                        android:gravity="center_vertical"
+                        android:text="30"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/humiditySetRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:numColumns="2"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:text="UMIDITA' DESIDERATA (%)"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <NumberPicker
+                        android:id="@+id/humiditySet"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:layout_marginRight="5dp" />
+                </TableRow>
+                <!--TEMPERATURESETTINGS-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/termostmodes"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:layout_margin="15dp"
+                    android:visibility="gone">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/termostText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/modeterm"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TableRow
+                    android:id="@+id/temSetRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:numColumns="2"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textVie21"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:text="TEMPERATURA AMBIENTE (C°)"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ambientTemp"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_marginLeft="25dp"
+                        android:gravity="center_vertical"
+                        android:text="30"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/temDesRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:numColumns="2"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:text="TEMPERATURA DESIDERATA (C°)"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <NumberPicker
+                        android:id="@+id/TempSet"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:layout_marginRight="5dp" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/temDesRowHigh"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:numColumns="2"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textView30"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:text="TEMPERATURA DESIDERATA MASSIMA (C°)"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <NumberPicker
+                        android:id="@+id/TempSetHigh"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:layout_marginRight="5dp" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/temDesRowLow"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:numColumns="2"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textView33"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:text="TEMPERATURA DESIDERATA MINIMA(C°)"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <NumberPicker
+                        android:id="@+id/TempSetLow"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:layout_marginRight="5dp" />
+                </TableRow>
+                <!--OPENCLOSE-->
+                <TableRow
+                    android:id="@+id/openClRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:numColumns="2"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:text="OPEN / CLOSE (%)"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <NumberPicker
+                        android:id="@+id/openClose"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:layout_marginRight="5dp" />
+                </TableRow>
+                <!--FILL-->
+                <Switch
+                    android:id="@+id/fill"
+                    android:layout_width="316dp"
+                    android:layout_height="53dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="PIENO / VUOTO"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+                <!--ROTATION-->
+                <TableRow
+                    android:id="@+id/rotationRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:numColumns="2"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:text="ROTAZIONE (GRADI)"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <NumberPicker
+                        android:id="@+id/rotazione"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:layout_marginRight="5dp"></NumberPicker>
+
+
+                </TableRow>
+                <!--SENSORSTATE-->
+                <TableRow
+                    android:id="@+id/sensRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:numColumns="2"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textVie24"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:text="UNITA' RILEVATE (PARTS_PER_MILLION)"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/sensorNum"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_marginLeft="25dp"
+                        android:gravity="center_vertical"
+                        android:text="30"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+
+                </TableRow>
+                <!--COLORSET-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/col"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:layout_margin="15dp"
+                    android:visibility="gone">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/colorSet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Colori"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <!--BRITHNESS-->
+                <TableRow
+                    android:id="@+id/brithRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:numColumns="2"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:text="BRILLANTEZZA (%)"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <NumberPicker
+                        android:id="@+id/brithset"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:layout_marginRight="5dp"></NumberPicker>
+
+
+                </TableRow>
+                <!--APPSELECTOR-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/appsel"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:layout_margin="15dp"
+                    android:visibility="gone">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/appSet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Applicazioni"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <!--VOLUME-->
+                <TableRow
+                    android:id="@+id/volRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:numColumns="2"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textView26"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:text="VOLUME"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:max="100" />
+
+                </TableRow>
+
+                <Switch
+                    android:id="@+id/mute"
+                    android:layout_width="316dp"
+                    android:layout_height="53dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="MUTO"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+                <!--LOCKUNLOCK-->
+                <Switch
+                    android:id="@+id/lock"
+                    android:layout_width="316dp"
+                    android:layout_height="53dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="BLOCCATO / SBLOCCATO"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</layout>
