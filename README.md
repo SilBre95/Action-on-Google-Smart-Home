@@ -12,7 +12,9 @@ Per poter realizzare questo progetto per prima cose è necessario creare una Sma
 - reportstate: per riportare a Google Home Graph le modifiche apportate allo stato del dispositivo in seguito all’esecuzione di un comando
 
 # Applicazione Android
-L’applicazione per la gestione di dispositivi connessi è stata pensata per poter offrire all’utente la possibilità di collegare alla smart home nuovi dispositivi, gestire i dispositivi connessi, scollegare i dispositivi e visualizzare lo stato corrente della propria smart home. L’app si presenta con una schermata principale in cui si può visualizzare la lista dei dispositivi collegati alla smart home. Per ogni dispositivo è presente un’icona, il nome del dispositivo e la tipologia. Con il pulsate “+” in basso sarà possibile accedere alla schermata utile per aggiungere un nuovo dispositivo. Per aggiungere un dispositivo è necessario inserire il nome, il modello, la ditta produttrice e la tipologia.
+L’applicazione [(GoogleAssistantProject)](GoogleAssistantProject) per la gestione di dispositivi connessi è stata pensata per poter offrire all’utente la possibilità di collegare alla smart home nuovi dispositivi, gestire i dispositivi connessi, scollegare i dispositivi e visualizzare lo stato corrente della propria smart home. L’app si presenta con una schermata principale in cui si può visualizzare la lista dei dispositivi collegati alla smart home. Per ogni dispositivo è presente un’icona, il nome del dispositivo e la tipologia. Con il pulsate “+” in basso sarà possibile accedere alla schermata utile per aggiungere un nuovo dispositivo. Per aggiungere un dispositivo è necessario inserire il nome, il modello, la ditta produttrice e la tipologia.
 Per gestire i vari dispositivi collegati, basterà cliccare su uno di essi, presente nella lista, e si aprirà la schermata di gestione, in cui si potrà visualizzare lo stato attuale e modificarlo. Inoltre se si preme l’icona con il cestino si potrà anche eliminare il dispositivo.
+
+# Alcune schermate dell'app
 
 
