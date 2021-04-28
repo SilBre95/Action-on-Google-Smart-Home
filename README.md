@@ -16,5 +16,4 @@ L’applicazione [(GoogleAssistantProject)](GoogleAssistantProject) per la gesti
 Per gestire i vari dispositivi collegati, basterà cliccare su uno di essi, presente nella lista, e si aprirà la schermata di gestione, in cui si potrà visualizzare lo stato attuale e modificarlo. Inoltre se si preme l’icona con il cestino si potrà anche eliminare il dispositivo.
 
 # Alcune schermate dell'app
-
-
+![alt text](https://github.com/SilBre95/Action-on-Google-Smart-Home/AppImages/photo5771453164489389847.jpg)
