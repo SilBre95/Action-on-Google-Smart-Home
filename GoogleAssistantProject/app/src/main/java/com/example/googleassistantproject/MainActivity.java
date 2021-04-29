@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void UpdateDev() throws InterruptedException {
-        Thread.sleep(1500);
+        Thread.sleep(2000);
         deviceArrayAdapter.clear();
         toDb.getDocument(deviceArrayAdapter);
     }
